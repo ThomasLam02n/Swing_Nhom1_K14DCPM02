@@ -1,0 +1,18 @@
+package javaSwingObserver;
+
+import javax.swing.SwingUtilities;
+
+public class AppStarter {
+    public static void main(String [] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new AppStarter().start();
+            }
+        });
+    }
+    private void start() {
+        Main m = new Main();
+        new Dialog(m);
+    }
+}
